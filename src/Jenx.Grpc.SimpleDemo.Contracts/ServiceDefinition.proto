@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+option csharp_namespace = "Jenx.Grpc.SimpleDemo.Contracts";
+
+service JenxSimpleGrpcService
+{
+	rpc SendMessage (RequestMessage) returns (ReplyMessage) {}
+}
+
+message RequestMessage 
+{
+  string requestPayload = 1;
+}
+
+message ReplyMessage
+{
+  string responsePayload = 1;
+}
